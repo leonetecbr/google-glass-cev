@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Acender a Lâmpada</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	    var quebrada = false;
+		 function mudaLampada(tipo) 
+		 {
+		 	if (!quebrada) 
+		 	{  document.getElementById('luz').src = "_imagens/" + tipo +".png";
+		 		if (tipo == "lampada-quebrada") 
+		 		{
+		 			quebrada = true;
+		 		}
+		 	}
+
+		 }
+	</script>
+</head>
+<body>
+    <h1>Acende a Lampada</h1>
+    <img src="_imagens/lampada-apagada.png" id="luz" onclick="mudaLampada('lampada-quebrada')" onmouseout="mudaLampada('lampada-quebrada')" onmousemove="mudaLampada('lampada-acesa')">
+    Passe o mouse sobre a lâmpada para acender e clique para quebra-lá
+</body>
+</html>
